@@ -1,25 +1,18 @@
 package de.unipassau;
 
+/**
+ * @author Nicolas Salgado
+ * @version 1.0
+ * <p>
+ * Categories class
+ */
+
 public class Categories {
 
     String productCategory;
     String region;
     int year;
     double revenue;
-
-    /**
-     * @param productCategory
-     * @param region
-     * @param year
-     * @param revenue
-     */
-    public Categories(String productCategory, String region, int year, double revenue) {
-        super();
-        this.productCategory = productCategory;
-        this.region = region;
-        this.year = year;
-        this.revenue = revenue;
-    }
 
     public String getProductCategory() {
         return productCategory;
@@ -54,19 +47,23 @@ public class Categories {
     }
 
     /**
-     * @param category
-     * @return
-     */
-    public int compareTo(Categories category) {
-        return productCategory.compareTo(category.getProductCategory());
-    }
-
-    /**
+     * Constructor to get all objects of categories
      *
+     * @param productCategory
+     *            String of vine, oil or olives
+     * @param region
+     *            String of germany or austria
+     * @param year
+     *            int of 2010, 2011, 2012 or 2013
+     * @param revenue
+     *            double of all turnovers
      */
-    public String toString() {
-        return productCategory + "\t" + region + "\t" + year + "\t" + revenue;
+    public Categories(String productCategory, String region, int year, double revenue) {
+        super();
+        this.productCategory = productCategory;
+        this.region = region;
+        this.year = year;
+        this.revenue = revenue;
     }
-
 
 }
